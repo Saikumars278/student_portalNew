@@ -1,0 +1,857 @@
+/* =====================================================
+   ROOT / BASE
+===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #faf7ff;
+}
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+.dash-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.dash-header {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 1px 3px #CF90EE;
+}
+
+.dash-header-left h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 700;
+}
+
+.dash-header-left h3 {
+  font-size: clamp(16px, 3vw, 22px);
+  margin-top: 8px;
+}
+
+.highlight {
+  color: #9333ea;
+}
+
+.dash-header-left p {
+  margin-top: 10px;
+  letter-spacing: 2px;
+  color: #555;
+  font-size: 14px;
+}
+
+.dash-header-img {
+  width: clamp(120px, 20vw, 180px);
+  border-radius: 14px;
+}
+
+/* =====================================================
+   DATE FILTER
+===================================================== */
+/* Date Filter Section */
+.date-filter-section {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+ 
+}
+ 
+.date-input-wrapper {
+  flex: 1;
+  background: white;
+  border: 2px solid #f3e8ff;
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #111827;
+    box-shadow: 0 1px 1px #CF90EE;
+ 
+}
+.date-input-wrapper svg {
+  color: #CF90EE;
+}
+ 
+
+.apply-filter-btn {
+  height: 56px;
+  padding: 0 28px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #c77dff, #9b5de5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.apply-filter-btn:hover {
+  opacity: 0.9;
+}
+
+/* =====================================================
+   COURSE CARD
+===================================================== */
+.course-card-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.course-card {
+  width: 100%;
+  max-width: 1250px;
+  background: #fff;
+  border-radius: 22px;
+  padding: 24px;
+  border: 1px solid rgba(177, 88, 255, 0.25);
+  box-shadow: 0 1px 2px #CF90EE;
+}
+
+.course-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #d9d6ff;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.progress-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f3e6ff;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.blue-fill {
+  background: #8d79ff;
+}
+
+.trainer-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.trainer-info {
+  text-align: right;
+}
+
+.trainer-info p {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.trainer-info span {
+  font-size: 11px;
+  color: #555;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+.dash-table {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(177, 88, 255, 0.3);
+  box-shadow: 0 0 12px rgba(177, 88, 255, 0.25);
+  overflow-x: auto;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(120px, 1fr));
+  align-items: center;
+  gap: 10px;
+}
+
+.table-header {
+  background: linear-gradient(to right, #d9b6ff, #f8eaff);
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.table-row {
+  padding: 14px;
+  font-size: 14px;
+}
+
+.table-row:hover {
+  background: rgba(240, 230, 255, 0.4);
+  border-radius: 10px;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn-link {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.join-btn {
+  background: #e8d8ff;
+  color: #6b2cff;
+}
+
+.play-btn {
+  background: #d7f3ff;
+  color: #0077b6;
+}
+
+.btn-link:hover {
+  opacity: 0.85;
+}
+
+/* =====================================================
+   PERFORMANCE
+===================================================== */
+.performance-box {
+  margin-top: 40px;
+  padding: 28px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(180, 95, 255, 0.3);
+  box-shadow: 0 1px 1px #CF90EE;
+}
+
+.performance-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.performance-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.performance-col {
+  flex: 1;
+  min-width: 240px;
+}
+
+.progress-fill.purple {
+  background: linear-gradient(to right, #c27aff, #e8d0ff);
+}
+
+/* =====================================================
+   MOBILE (≤ 480px)
+===================================================== */
+@media (max-width: 480px) {
+  .dash-header {
+    padding: 20px;
+    margin-top: 55px;
+    text-align: center;
+
+  }
+
+  .trainer-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+   TABLET (≤ 768px)
+===================================================== */
+@media (max-width: 768px) {
+  .dash-header {
+    flex-direction: column;
+  }
+
+  .date-filter-section {
+    flex-direction: column;
+  }
+
+  .performance-row {
+    flex-direction: column;
+  }
+}
+
+/* =====================================================
+   LARGE SCREENS (≥ 1400px)
+===================================================== */
+@media (min-width: 1400px) {
+  .dash-container {
+    padding: 40px;
+  }
+}
+/* =====================================================
+   VISIBILITY CONTROL
+===================================================== */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* =====================================================
+   MOBILE CARD LAYOUT
+===================================================== */
+.topic-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(177, 88, 255, 0.25);
+  font-size: 13px;
+}
+
+.topic-card div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  margin-bottom: 10px;
+}
+
+.topic-card span {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.topic-card strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* =====================================================
+   MOBILE BREAKPOINT
+===================================================== */
+@media (max-width: 480px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  /* REMOVE BROKEN GRID ON MOBILE */
+  .table-header,
+  .table-row {
+    display: none;
+  }
+}
+/* =====================================================
+   MOBILE TABLE FIX (KEEP ALIGNMENT)
+===================================================== */
+@media (max-width: 480px) {
+
+  .dash-table {
+    overflow-x: auto;
+  }
+
+  .table-header,
+  .table-row {
+    min-width: 900px;          /* ✅ keeps all columns */
+    grid-template-columns: 
+      120px  /* Date */
+      200px  /* Topic */
+      160px  /* Trainer */
+      100px  /* Hours */
+      120px  /* Status */
+      120px  /* Zoom */
+      120px; /* Video */
+  }
+
+  .table-header {
+    font-size: 13px;
+  }
+
+  .table-row {
+    font-size: 13px;
+  }
+
+  .table-row p {
+    white-space: nowrap;       /* ✅ prevents text wrap */
+  }
+
+  .btn-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+/* =====================================================
+   ROOT / BASE
+===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #faf7ff;
+}
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+.dash-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.dash-header {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 1px 3px #CF90EE;
+}
+
+.dash-header-left h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 700;
+}
+
+.dash-header-left h3 {
+  font-size: clamp(16px, 3vw, 22px);
+  margin-top: 8px;
+}
+
+.highlight {
+  color: #9333ea;
+}
+
+.dash-header-left p {
+  margin-top: 10px;
+  letter-spacing: 2px;
+  color: #555;
+  font-size: 14px;
+}
+
+.dash-header-img {
+  width: clamp(120px, 20vw, 180px);
+  border-radius: 14px;
+}
+
+/* =====================================================
+   TABLE (DESKTOP + MOBILE SAFE)
+===================================================== */
+.dash-table {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(177, 88, 255, 0.3);
+  box-shadow: 0 0 12px rgba(177, 88, 255, 0.25);
+  overflow-x: auto; /* ✅ enables horizontal scroll */
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns:
+    120px   /* Date */
+    220px   /* Topic */
+    160px   /* Trainer */
+    100px   /* Hours */
+    120px   /* Status */
+    120px   /* Zoom */
+    120px;  /* Video */
+  align-items: center;
+  gap: 10px;
+  min-width: 960px; /* ✅ prevents squeeze on mobile */
+}
+
+.table-header {
+  background: linear-gradient(to right, #d9b6ff, #f8eaff);
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.table-row {
+  padding: 14px;
+  font-size: 14px;
+}
+
+.table-row:hover {
+  background: rgba(240, 230, 255, 0.4);
+  border-radius: 10px;
+}
+
+.table-row p {
+  white-space: nowrap; /* ✅ keeps alignment */
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+.btn-link {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.join-btn {
+  background: #e8d8ff;
+  color: #6b2cff;
+}
+
+.play-btn {
+  background: #d7f3ff;
+  color: #0077b6;
+}
+
+.btn-link:hover {
+  opacity: 0.85;
+}
+
+/* =====================================================
+   MOBILE FIX (≤ 480px)
+===================================================== */
+@media (max-width: 480px) {
+  .dash-header {
+    padding: 20px;
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  .dash-table {
+    padding: 12px;
+  }
+
+  .table-header,
+  .table-row {
+    font-size: 13px;
+  }
+
+  .btn-link {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+/* ================= MOBILE CARD ================= */
+.topic-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 4px 10px rgba(177, 88, 255, 0.2);
+  font-size: 14px;
+}
+
+/* Label + Value rows */
+.topic-card .row {
+  display: grid;
+  grid-template-columns: 90px 1fr; /* fixed label width */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topic-card .row span {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.topic-card .row strong {
+  color: #111827;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Buttons row */
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.card-actions a {
+  flex: 1;
+  text-align: center;
+}
+
+/* =====================================================
+   BASE
+===================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #faf7ff;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+.dash-container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.dash-header {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: 0 1px 3px #cf90ee;
+}
+
+.dash-header-left h2 {
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 700;
+}
+
+.dash-header-left h3 {
+  font-size: clamp(16px, 3vw, 22px);
+  margin-top: 8px;
+}
+
+.highlight {
+  color: #9333ea;
+}
+
+.dash-header-left p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
+}
+
+.dash-header-img {
+  width: clamp(120px, 20vw, 180px);
+  border-radius: 14px;
+}
+
+/* =====================================================
+   TABLE (DESKTOP / TABLET)
+===================================================== */
+.dash-table {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 30px;
+  border: 1px solid rgba(177, 88, 255, 0.3);
+  box-shadow: 0 0 12px rgba(177, 88, 255, 0.25);
+  overflow-x: auto;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns:
+    120px
+    220px
+    160px
+    100px
+    120px
+    120px
+    120px;
+  align-items: center;
+  gap: 10px;
+  min-width: 960px;
+}
+
+.table-header {
+  background: linear-gradient(to right, #d9b6ff, #f8eaff);
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.table-row {
+  padding: 14px;
+  font-size: 14px;
+}
+
+.table-row:hover {
+  background: rgba(240, 230, 255, 0.4);
+  border-radius: 10px;
+}
+
+.table-row p {
+  white-space: nowrap;
+}
+
+/* =====================================================
+   BUTTONS (GLOBAL)
+===================================================== */
+.btn-link {
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+}
+
+.join-btn {
+  background: #e8d8ff;
+  color: #6b2cff;
+}
+
+.play-btn {
+  background: #d7f3ff;
+  color: #0077b6;
+}
+
+.btn-link:hover {
+  opacity: 0.85;
+}
+
+/* =====================================================
+   MOBILE CARD VIEW
+===================================================== */
+.topic-cards {
+  display: none;
+  margin-top: 24px;
+}
+
+.topic-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 4px 10px rgba(177, 88, 255, 0.2);
+  font-size: 14px;
+}
+
+.topic-card .row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.topic-card .row span {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.topic-card .row strong {
+  color: #111827;
+  font-weight: 600;
+}
+
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.card-actions a {
+  flex: 1;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+  .dash-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .dash-header {
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  /* Hide table, show cards */
+  .dash-table {
+    display: none;
+  }
+
+  .topic-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn-link {
+    height: 36px;
+    font-size: 13px;
+    width: 100px;
+  }
+}

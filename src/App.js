@@ -1,24 +1,68 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import ChangePassword from "./components/ChangePassword";
+import StudentDashboard from "./components/StudentDashboard";
+import Course from "./components/course";
+import AttendanceDashboard from "./components/AttendanceDashboard";
+import Layout from "./components/Layout";
+import StudentTaskLog from "./components/StudentTaskLog";
+import Settings from "./components/settings";
+import Payment from "./components/Payment";
+import ChatPage from "./components/chat";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+
+        {/* 🔓 NO SIDEBAR */}
+        <Route path="/" element={<Login />} />
+
+        {/* 🔐 SIDEBAR PAGES */}
+        <Route
+          path="/student-dashboard"
+          element={<Layout><StudentDashboard /></Layout>}
+        />
+
+        <Route
+          path="/course"
+          element={<Layout><Course /></Layout>}
+        />
+
+        <Route
+          path="/attendancedashboard"
+          element={<Layout><AttendanceDashboard /></Layout>}
+        />
+
+        <Route
+          path="/change-password"
+          element={<Layout><ChangePassword /></Layout>}
+        />
+
+        <Route
+          path="/student/task-log"
+          element={<Layout><StudentTaskLog /></Layout>}
+        />
+
+        <Route
+          path="/settings"
+          element={<Layout><Settings /></Layout>}
+        />
+
+        <Route
+          path="/payment"
+          element={<Layout><Payment /></Layout>}
+        />
+
+         <Route
+          path="/chat"
+          element={<Layout>
+            <ChatPage/>
+          </Layout>}
+        />
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 

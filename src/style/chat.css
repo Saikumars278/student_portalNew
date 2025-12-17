@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+.chat-page {
+  min-height: 100vh;
+  background: #f9f7ff;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  padding: 30px;
+}
+ 
+/* ===== TOP CARD ===== */
+.top-card {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  background: #fff;
+  border: 2px solid #e9d5ff;
+  border-radius: 28px;
+  padding: 24px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+ 
+.top-left h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+ 
+.top-left h2 span {
+  color: #9333ea;
+}
+ 
+.top-left p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+ 
+.top-details {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #374151;
+}
+ 
+.top-card img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 60px;
+  border: 6px solid #e9d5ff;
+}
+ 
+/* ===== CHAT CARD ===== */
+.chat-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  padding: 30px;
+}
+ 
+.chat-card h2 {
+  margin-bottom: 20px;
+}
+ 
+/* ===== CHAT BODY ===== */
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 420px;
+}
+ 
+/* MESSAGE */
+.msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+ 
+.msg.right {
+  justify-content: flex-end;
+}
+ 
+.bubble {
+  background: #eed6ff;
+  padding: 14px 18px;
+  font-size: 14px;
+  max-width: 420px;
+}
+ 
+.msg.right .bubble {
+  border-radius: 18px 0 18px 18px;
+}
+ 
+.msg.left .bubble {
+  border-radius: 0 18px 18px 18px;
+}
+ 
+.avatar {
+  width: 34px;
+  height: 34px;
+  background: #c084fc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+}
+ 
+/* ===== INPUT ===== */
+.chat-input {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+ 
+.chat-input button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background: #f3e8ff;
+  cursor: pointer;
+}
+ 
+.chat-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #f3f4f6;
+  outline: none;
+  font-size: 14px;
+}
+ 
+.chat-input .send {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #c084fc;
+  color: white;
+  font-size: 18px;
+}
+ 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .top-card {
+    flex-direction: column;
+    text-align: center;
+  }
+ 
+  .top-card img {
+    width: 160px;
+  }
+ 
+  .bubble {
+    max-width: 100%;
+  }
+}
+ 
+ @media (max-width: 480px) {
+  .chat-page {
+    padding: 16px;
+  }
+
+  .top-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .top-left h2 {
+    font-size: 18px;
+  }
+
+  .top-left p {
+    font-size: 13px;
+  }
+
+  .top-details {
+    font-size: 12px;
+  }
+
+  .top-card img {
+    width: 140px;
+    height: 100px;
+    border-radius: 40px;
+  }
+
+  .chat-card {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .chat-body {
+    min-height: 300px;
+    gap: 16px;
+  }
+
+  .bubble {
+    font-size: 13px;
+    padding: 12px 14px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .chat-input {
+    gap: 8px;
+  }
+
+  .chat-input input {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .chat-input .send {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .chat-page {
+    padding: 20px;
+  }
+
+  .top-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-details {
+    margin-top: 10px;
+  }
+
+  .chat-card {
+    padding: 24px;
+  }
+
+  .bubble {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-card,
+  .chat-card {
+    max-width: 100%;
+  }
+
+  .chat-body {
+    min-height: 380px;
+  }
+
+  .bubble {
+    max-width: 360px;
+  }
+}
+@media (min-width: 1400px) {
+  .chat-page {
+    padding: 50px;
+  }
+
+  .top-card,
+  .chat-card {
+    max-width: 1400px;
+  }
+
+  .bubble {
+    font-size: 15px;
+    max-width: 480px;
+  }
+
+  .chat-body {
+    min-height: 520px;
+  }
+}
